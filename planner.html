@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff7fa" />
+    <title>Study Planner | Ayorinde Eniola Celine</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="index.html">CELINE<span>.</span></a
+      ><button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="about.html">About</a
+        ><a href="projects.html">Projects</a
+        ><a class="active" href="planner.html">Planner</a
+        ><a href="contact.html">Contact</a>
+      </nav>
+      <a class="header-contact" href="contact.html"
+        >Let's connect <span>↗</span></a
+      >
+    </header>
+    <main>
+      <section class="page-hero wrap">
+        <h1>Make room for<br /><span>what matters.</span></h1>
+        <p class="page-lead">
+          A simple planner to keep track of study tasks, personal goals and
+          things you want to get done.
+        </p>
+      </section>
+      <section class="planner-layout wrap">
+        <form class="planner-form" id="taskForm">
+          <h2 id="taskFormTitle">Add a task</h2>
+          <label for="taskTitle">Task</label
+          ><input
+            id="taskTitle"
+            name="title"
+            type="text"
+            placeholder="e.g. Review JavaScript notes"
+            required
+            maxlength="100"
+          /><label for="taskDate">Due date</label
+          ><input id="taskDate" name="date" type="date" /><label
+            for="taskCategory"
+            >Category</label
+          ><select id="taskCategory" name="category">
+            <option>Study</option>
+            <option>Personal</option>
+            <option>Project</option>
+          </select>
+          <div class="planner-form-actions">
+            <button class="button button-primary" type="submit" id="saveTask">
+              Add task <span>＋</span></button
+            ><button
+              class="button button-quiet hidden"
+              type="button"
+              id="cancelEdit"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+        <div class="planner-board">
+          <div class="planner-board-head">
+            <div>
+              <h2>My tasks</h2>
+              <p id="taskCount">0 tasks</p>
+            </div>
+            <div class="filter-pills" role="group" aria-label="Filter tasks">
+              <button
+                class="filter-button active"
+                data-filter="all"
+                type="button"
+              >
+                All</button
+              ><button class="filter-button" data-filter="active" type="button">
+                To do</button
+              ><button class="filter-button" data-filter="done" type="button">
+                Done
+              </button>
+            </div>
+          </div>
+          <div class="task-list" id="taskList">
+            <div class="empty-state" id="emptyState">
+              <span>✳</span><strong>Nothing here yet.</strong>
+              <p>Add a task and it will appear here.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <a class="wordmark" href="index.html">CELINE<span>.</span></a
+      ><span>© <span id="year"></span> Ayorinde Eniola Celine</span>
+      <div class="footer-social">
+        <a
+          href="https://www.instagram.com/ce275line/?utm_source=ig_web_button_share_sheet"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram ↗</a
+        ><a
+          href="https://www.tiktok.com/@celinemercy229?is_from_webapp=1&sender_device=pc"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TikTok ↗</a
+        >
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
